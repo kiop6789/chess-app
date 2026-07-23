@@ -1,0 +1,336 @@
+[
+  {
+    "id": "tac-fourchette-0001",
+    "theme": "tactique",
+    "subtheme": "fourchette",
+    "difficulty": 800,
+    "fen": "r3k3/8/8/1N6/8/8/6P1/4K3 w - - 0 1",
+    "solution": [
+      "Nc7+",
+      "Kd7",
+      "Nxa8"
+    ],
+    "explanation": "La fourchette royale : le cavalier saute en c7 en faisant échec au roi et en attaquant la tour a8. Après le déplacement du roi, le cavalier capture la tour.",
+    "hint": "Un cavalier peut attaquer deux pièces à la fois. Visez la case c7."
+  },
+  {
+    "id": "tac-fourchette-0002",
+    "theme": "tactique",
+    "subtheme": "fourchette",
+    "difficulty": 1000,
+    "fen": "6k1/3q1pp1/8/8/4N3/8/6PP/4K3 w - - 0 1",
+    "solution": [
+      "Nf6+",
+      "Kh8",
+      "Nxd7"
+    ],
+    "explanation": "Cf6+ est une fourchette entre le roi g8 et la dame d7. Le roi doit bouger, et le cavalier récolte la dame au coup suivant.",
+    "hint": "Le cavalier blanc peut donner échec tout en visant la dame noire."
+  },
+  {
+    "id": "tac-fourchette-0003",
+    "theme": "tactique",
+    "subtheme": "fourchette",
+    "difficulty": 950,
+    "fen": "7k/8/2n1b3/8/3P4/8/8/4K3 w - - 0 1",
+    "solution": [
+      "d5"
+    ],
+    "explanation": "Les pions aussi font des fourchettes ! d5 attaque simultanément le cavalier c6 et le fou e6 : l'un des deux est perdu.",
+    "hint": "Avancez le pion qui touche deux pièces ennemies."
+  },
+  {
+    "id": "tac-fourchette-0004",
+    "theme": "tactique",
+    "subtheme": "fourchette",
+    "difficulty": 1050,
+    "fen": "7k/8/8/3r1n2/8/8/4P3/4K3 w - - 0 1",
+    "solution": [
+      "e4"
+    ],
+    "explanation": "e4 ! attaque la tour d5 et le cavalier f5 en même temps — et aucun des deux ne peut capturer le pion. La fourchette de pion : économique et mortelle.",
+    "hint": "Le pion e2 peut frapper deux pièces à la fois en avançant de deux cases."
+  },
+  {
+    "id": "tac-fourchette-0005",
+    "theme": "tactique",
+    "subtheme": "fourchette",
+    "difficulty": 1450,
+    "fen": "2q3k1/8/8/5N2/8/8/8/6K1 w - - 0 1",
+    "solution": [
+      "Ne7+",
+      "Kh8",
+      "Nxc8"
+    ],
+    "explanation": "Ce7+ fourche le roi g8 et la dame c8. Un motif classique : la dame noire n'a pas le temps de se sauver car son roi est en échec.",
+    "hint": "Le cavalier blanc peut donner échec en attaquant la dame."
+  },
+  {
+    "id": "tac-clouage-0001",
+    "theme": "tactique",
+    "subtheme": "clouage",
+    "difficulty": 900,
+    "fen": "r1bqk2r/pppp1ppp/5n2/4p1B1/8/5N2/PPPP1PPP/RN1QK2R w KQkq - 0 1",
+    "solution": [
+      "Nxe5"
+    ],
+    "explanation": "Le cavalier f6 est cloué par le fou g5 sur la dame d8 : il ne peut pas bouger. Le pion e5 n'est donc pas réellement défendu — Cxe5 gagne un pion en toute sécurité.",
+    "hint": "Un défenseur cloué ne défend plus rien."
+  },
+  {
+    "id": "tac-clouage-0002",
+    "theme": "tactique",
+    "subtheme": "clouage",
+    "difficulty": 950,
+    "fen": "r1bqk2r/pppp1ppp/5n2/6B1/4P3/8/PPPP1PPP/RN1QK2R w KQkq - 0 1",
+    "solution": [
+      "e5"
+    ],
+    "explanation": "e5 attaque le cavalier f6, qui est cloué sur la dame d8 par le fou g5 et ne peut absolument pas bouger. Le cavalier est perdu.",
+    "hint": "Attaquez la pièce clouée avec un pion."
+  },
+  {
+    "id": "tac-clouage-0003",
+    "theme": "tactique",
+    "subtheme": "clouage",
+    "difficulty": 1100,
+    "fen": "4k3/1p6/2n5/8/BP6/8/8/4K3 w - - 0 1",
+    "solution": [
+      "b5"
+    ],
+    "explanation": "Le cavalier c6 est cloué par le fou a4 sur le roi e8 : même défendu par le pion b7, il ne peut pas bouger. b5 ! le gagne — une pièce clouée est une pièce perdue si on l'attaque assez.",
+    "hint": "Attaquez le cavalier cloué avec le pion b."
+  },
+  {
+    "id": "tac-clouage-0004",
+    "theme": "tactique",
+    "subtheme": "clouage",
+    "difficulty": 1200,
+    "fen": "r1bqk2r/pp1p1ppp/5n2/6B1/4P3/8/PPPP1PPP/RN1QK2R w KQkq - 0 1",
+    "solution": [
+      "e5"
+    ],
+    "explanation": "Le cavalier f6 est cloué sur la dame d8 par le fou g5 : bouger le cavalier livrerait la dame (Fxd8). e5 ! gagne donc le cavalier pour un simple pion.",
+    "hint": "Un défenseur cloué ne défend plus : attaquez le cavalier avec le pion e."
+  },
+  {
+    "id": "tac-clouage-0005",
+    "theme": "tactique",
+    "subtheme": "clouage",
+    "difficulty": 1300,
+    "fen": "r1bqkb1r/pppp1ppp/2n5/8/2B1n3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 1",
+    "solution": [
+      "Qe2",
+      "d5",
+      "d3"
+    ],
+    "explanation": "Le cavalier e4 est cloué sur la colonne e contre son propre roi : il ne peut pas bouger ! De2 le fixe, les Noirs le défendent par d5, mais d3 l'attaque au pion — il est perdu.",
+    "hint": "La dame peut clouer le cavalier e4 sur son roi via la colonne e."
+  },
+  {
+    "id": "tac-enfilade-0001",
+    "theme": "tactique",
+    "subtheme": "enfilade",
+    "difficulty": 900,
+    "fen": "7r/6k1/8/8/8/8/5B2/6K1 w - - 0 1",
+    "solution": [
+      "Bd4+",
+      "Kg8",
+      "Bxh8"
+    ],
+    "explanation": "Fd4+ place le roi g7 en enfilade avec la tour h8 sur la grande diagonale. Le roi doit bouger, et le fou capture la tour derrière.",
+    "hint": "Alignez le fou avec le roi… et regardez ce qu'il y a derrière."
+  },
+  {
+    "id": "tac-enfilade-0002",
+    "theme": "tactique",
+    "subtheme": "enfilade",
+    "difficulty": 950,
+    "fen": "4r3/8/4k3/8/8/8/8/R5K1 w - - 0 1",
+    "solution": [
+      "Re1+",
+      "Kd6",
+      "Rxe8"
+    ],
+    "explanation": "Te1+ met le roi e6 en échec. Derrière lui, sur la même colonne, se trouve la tour e8 : quand le roi s'écarte, la tour est prise.",
+    "hint": "Échec à la tour… puis capture derrière le roi."
+  },
+  {
+    "id": "tac-enfilade-0003",
+    "theme": "tactique",
+    "subtheme": "enfilade",
+    "difficulty": 1050,
+    "fen": "8/8/4k3/8/8/8/q7/2R2BK1 w - - 0 1",
+    "solution": [
+      "Bc4+",
+      "Kd6",
+      "Bxa2"
+    ],
+    "explanation": "Fc4+ enfile le roi e6 et la dame a2. Si la dame capture le fou (Dxc4 ??), Txc4 la reprend : les blancs gagnent la dame dans tous les cas.",
+    "hint": "La tour c1 protège la case c4."
+  },
+  {
+    "id": "tac-enfilade-0004",
+    "theme": "tactique",
+    "subtheme": "enfilade",
+    "difficulty": 1150,
+    "fen": "6r1/5k2/8/8/8/8/8/5B1K w - - 0 1",
+    "solution": [
+      "Bc4+",
+      "Kg7",
+      "Bxg8"
+    ],
+    "explanation": "Fc4+ enfile le roi f7 et la tour g8 sur la diagonale a2-g8. Le roi s'écarte et la tour tombe.",
+    "hint": "La diagonale c4-g8 passe par le roi… et finit sur la tour."
+  },
+  {
+    "id": "tac-decouverte-0001",
+    "theme": "tactique",
+    "subtheme": "decouverte",
+    "difficulty": 1000,
+    "fen": "3q2k1/4p1pp/8/3N4/8/8/8/3R2K1 w - - 0 1",
+    "solution": [
+      "Nf6+",
+      "gxf6",
+      "Rxd8+"
+    ],
+    "explanation": "Cf6+ ! : le cavalier donne échec et découvre l'attaque de la tour d1 sur la dame d8. La dame ne peut pas prendre le cavalier (le pion e7 bloque sa diagonale) : après gxf6, Txd8.",
+    "hint": "Bougez le cavalier en donnant échec pour libérer la colonne d."
+  },
+  {
+    "id": "tac-decouverte-0002",
+    "theme": "tactique",
+    "subtheme": "decouverte",
+    "difficulty": 1100,
+    "fen": "6k1/4q3/8/8/4B3/8/8/4R1K1 w - - 0 1",
+    "solution": [
+      "Bd5+",
+      "Kh8",
+      "Rxe7"
+    ],
+    "explanation": "Fd5+ : le fou donne échec et découvre en même temps l'attaque de la tour e1 sur la dame e7. Après le déplacement du roi, Txe7 gagne la dame.",
+    "hint": "Le fou peut donner échec en découvrant la colonne e."
+  },
+  {
+    "id": "tac-decouverte-0003",
+    "theme": "tactique",
+    "subtheme": "decouverte",
+    "difficulty": 1300,
+    "fen": "4q1k1/6pp/8/8/4N3/8/8/4R1K1 w - - 0 1",
+    "solution": [
+      "Nf6+",
+      "gxf6",
+      "Rxe8+"
+    ],
+    "explanation": "Cf6+ ! : échec au roi plus découverte de la tour e1 sur la dame e8. La dame ne peut ni prendre le cavalier (hors de portée) ni rester en place : après gxf6, Txe8.",
+    "hint": "Bougez le cavalier avec échec pour ouvrir la colonne e."
+  },
+  {
+    "id": "tac-zwischenzug-0001",
+    "theme": "tactique",
+    "subtheme": "zwischenzug",
+    "difficulty": 1350,
+    "fen": "r1bqk2r/pppp1ppp/2n2n2/8/2BPn3/2b5/PP3PPP/R1BQ1RK1 w kq - 0 1",
+    "solution": [
+      "d5"
+    ],
+    "explanation": "Au lieu de reprendre bêtement le fou c3 (bxc3), les blancs insèrent l'entre-coup d5 !! qui attaque le cavalier c6 en gagnant un temps : le fou c3 restera pendu. Ce zwischenzug renverse l'ordre « attendu » des coups.",
+    "hint": "Le cavalier c6 est attaquable en plein centre — avant de reprendre en c3."
+  },
+  {
+    "id": "tac-sacrifice-0001",
+    "theme": "tactique",
+    "subtheme": "sacrifice",
+    "difficulty": 750,
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "solution": [
+      "Rd8#"
+    ],
+    "explanation": "Mat du couloir : le roi noir est emmuré derrière ses trois pions. Td8 est mat immédiat — aucune case de fuite, aucune parade.",
+    "hint": "Le roi noir n'a aucune case de fuite sur la 8e rangée."
+  },
+  {
+    "id": "tac-sacrifice-0002",
+    "theme": "tactique",
+    "subtheme": "sacrifice",
+    "difficulty": 800,
+    "fen": "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B5/8/PPPP1PPP/RNB1K1NR w KQkq - 0 1",
+    "solution": [
+      "Qxf7#"
+    ],
+    "explanation": "Le mat du berger : Dxf7 est protégée par le fou c4, et le roi n'a aucune fuite. Leçon : f7 n'est défendu que par le roi en début de partie — c'est le point faible.",
+    "hint": "La dame et le fou c4 visent le même pion."
+  },
+  {
+    "id": "tac-sacrifice-0003",
+    "theme": "tactique",
+    "subtheme": "sacrifice",
+    "difficulty": 1100,
+    "fen": "r5k1/5ppp/8/8/Q7/8/8/4R1K1 w - - 0 1",
+    "solution": [
+      "Qe8+",
+      "Rxe8",
+      "Rxe8#"
+    ],
+    "explanation": "Déviation sacrificielle : De8+ ! force Txe8, puis Txe8 est mat — la tour noire a été détournée de la défense de la case e8 par… elle-même.",
+    "hint": "Sacrifiez la dame pour attirer la tour sur une case fatale."
+  },
+  {
+    "id": "tac-sacrifice-0004",
+    "theme": "tactique",
+    "subtheme": "sacrifice",
+    "difficulty": 1250,
+    "fen": "5rk1/6pp/8/8/8/4R3/8/4R2K w - - 0 1",
+    "solution": [
+      "Re8",
+      "Rxe8",
+      "Rxe8+"
+    ],
+    "explanation": "Les tours doublées percent la 8e rangée : Te8+ force Txe8, puis la seconde tour reprend et mate — le roi g8 est bloqué par ses propres pions.",
+    "hint": "Sacrifiez la première tour pour ouvrir la dernière rangée."
+  },
+  {
+    "id": "tac-sacrifice-0005",
+    "theme": "tactique",
+    "subtheme": "sacrifice",
+    "difficulty": 1500,
+    "fen": "r2qkbnr/ppp2ppp/2np4/4p2b/2B1P3/2N2N1P/PPPP1PP1/R1BQK2R w KQkq - 0 1",
+    "solution": [
+      "Nxe5",
+      "Bxd1",
+      "Bxf7+",
+      "Ke7",
+      "Nd5#"
+    ],
+    "explanation": "Le mat de Légal : Cxe5 !! abandonne la dame. Si Fxd1 ??, Fxf7+ Re7, Cd5 est mat ! Le cavalier e5, le fou c4 et le cavalier c3 étouffent le roi au centre. Une leçon éternelle sur les dangers de la capture gourmande.",
+    "hint": "Le cavalier f6 est cloué… mais est-ce vraiment un problème ?"
+  },
+  {
+    "id": "tac-sacrifice-0006",
+    "theme": "tactique",
+    "subtheme": "sacrifice",
+    "difficulty": 900,
+    "fen": "7k/6pp/5N2/8/8/8/8/K6R w - - 0 1",
+    "solution": [
+      "Rxh7#"
+    ],
+    "explanation": "Le mat arabe : Txh7 ! est mat — la tour est protégée par le cavalier f6, qui couvre aussi la case de fuite g8. Le duo tour + cavalier est redoutable contre un roi au coin.",
+    "hint": "Le cavalier f6 protège h7 et contrôle g8 : la tour peut frapper."
+  },
+  {
+    "id": "tac-sacrifice-0007",
+    "theme": "tactique",
+    "subtheme": "sacrifice",
+    "difficulty": 1400,
+    "fen": "5rk1/5ppp/8/8/8/3B1N2/PPP5/3Q2K1 w - - 0 1",
+    "solution": [
+      "Bxh7+",
+      "Kxh7",
+      "Ng5+",
+      "Kg8",
+      "Qh5"
+    ],
+    "explanation": "Le sacrifice grec : Fxh7+ ! Rxh7, Cg5+ Rg8, Dh5 — et la menace Dh7 mat est imparable : la tour f8 bouche la fuite du roi. Ce sacrifice fonctionne quand la dame peut rejoindre la colonne h.",
+    "hint": "Sacrifiez le fou sur h7, puis ramenez le cavalier et la dame vers le roi."
+  }
+]

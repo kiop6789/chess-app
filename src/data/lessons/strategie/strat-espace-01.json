@@ -1,0 +1,28 @@
+{
+  "id": "strat-espace-01",
+  "category": "strategie",
+  "title": "L'avantage d'espace",
+  "level": "Avancé",
+  "intro": "Plus d'espace signifie des pièces qui communiquent mieux. Mais l'espace seul ne gagne pas — il faut savoir l'utiliser sans s'étirer.",
+  "sections": [
+    {
+      "heading": "Le rideau Maroczy",
+      "text": "Les pions c4 et e4 (formation « Maroczy », née de la sicilienne accélérée) contrôlent d5 et b5 : les Noirs manquent cruellement de cases pour leurs pièces. Ils ne sont pas perdus — mais une seule imprécision peut suffire. Avec l'espace : ne vous précipitez pas, étouffez d'abord.",
+      "fen": "r1bq1rk1/pp2ppbp/2np1np1/8/2P1P3/2N2N2/PP2PPPP/R1BQ1RK1 b - - 0 1"
+    },
+    {
+      "heading": "Le danger de la sur-extension",
+      "text": "L'espace devient une faiblesse quand les pions avancés ne peuvent plus être défendus. Ici, les pions blancs d5 et e5 sont impressionnants mais fragiles : les Noirs les attaqueront avec ...f6 et ...c6. Règle : une avancée de pions doit être soutenue par les pièces, sinon elle s'effondre.",
+      "fen": "r1bq1rk1/pp2ppbp/2np1np1/8/2PPP3/2N5/PP3PPP/R1BQ1RK1 b - - 0 1"
+    },
+    {
+      "heading": "Comment jouer contre l'espace adverse",
+      "text": "Trois recettes : 1) Échangez une ou deux pièces mineures — moins de pièces, moins d'étouffement. 2) Frappez la chaîne de pions par ruptures (...b5, ...f5, ...d5) plutôt que de subir. 3) Acceptez la passivité temporaire SANS créer de faiblesse : le temps joue pour vous si la structure adverse est fragile.",
+      "fen": "r1bq1rk1/pp2ppbp/2np1np1/8/2P1P3/2N2N2/PP2PPPP/R1BQ1RK1 b - - 0 1"
+    },
+    {
+      "heading": "À retenir",
+      "text": "1) L'espace améliore la communication des pièces. 2) Avec l'espace, empêchez d'abord les ruptures adverses. 3) Contre l'espace : échanges + ruptures de pions. 4) Les pions avancés non soutenus sont des cibles, pas des forces."
+    }
+  ]
+}

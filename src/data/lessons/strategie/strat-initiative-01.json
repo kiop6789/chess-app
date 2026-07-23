@@ -1,0 +1,35 @@
+{
+  "id": "strat-initiative-01",
+  "category": "strategie",
+  "title": "L'initiative et le développement",
+  "level": "Intermédiaire",
+  "intro": "L'initiative, c'est la capacité de créer des menaces qui obligent l'adversaire à réagir. Elle vaut souvent plus qu'un pion.",
+  "sections": [
+    {
+      "heading": "Le temps est une pièce",
+      "text": "À l'ouverture, chaque coup qui ne développe pas est un cadeau à l'adversaire. Un avantage de deux ou trois coups de développement, avec le roi adverse au centre, justifie presque toujours un sacrifice. Posez-vous la question après chaque coup adverse : « Puis-je créer une menace plutôt que de me défendre ? »",
+      "fen": "r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4"
+    },
+    {
+      "heading": "Exemple de maître : Morphy écrase l'aristocratie",
+      "text": "Paul Morphy, opéra de Paris, 1858. Les Noirs viennent de jouer ...De6, menaçant apparemment de se consolider. Mais les Blancs ont TOUTES leurs pièces actives et le roi noir est au centre : Morphy conclut en cinq coups. Suivez la combinaison : élimination de la tour, puis Db8+ !! — sacrifice de dame qui dévie le cavalier — et Td8 mat. L'un des plus beaux mats de l'histoire.",
+      "fen": "1n2kb1r/p2r1ppp/4q3/1B2p1B1/4P3/1Q6/PPP2PPP/2KR4 w - - 2 15",
+      "moves": [
+        "Bxd7+",
+        "Nxd7",
+        "Qb8+",
+        "Nxb8",
+        "Rd8#"
+      ]
+    },
+    {
+      "heading": "Convertir l'initiative",
+      "text": "L'initiative est un capital qui fond : si vous ne la convertissez pas (matériel, mat, faiblesse durable), elle s'évapore et l'adversaire se consolide. Quand l'attaque n'aboutit pas, cherchez la transformation : gagner un pion, abîmer une structure, ou échanger vers une finale favorable.",
+      "fen": "1n2kb1r/p2r1ppp/4q3/1B2p1B1/4P3/1Q6/PPP2PPP/2KR4 w - - 2 15"
+    },
+    {
+      "heading": "À retenir",
+      "text": "1) Développement + roi adverse au centre = cherchez le sacrifice. 2) Créez des menaces à chaque coup. 3) L'initiative non convertie disparaît. 4) La meilleure défense contre une initiative est souvent le contre-sacrifice qui rend le matériel en échange de la consolidation."
+    }
+  ]
+}

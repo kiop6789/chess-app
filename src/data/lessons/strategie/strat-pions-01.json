@@ -1,0 +1,28 @@
+{
+  "id": "strat-pions-01",
+  "category": "strategie",
+  "title": "Structures de pions et cases faibles",
+  "level": "Intermédiaire",
+  "intro": "Les pions sont « l'âme du jeu » (Philidor). Leur structure détermine les plans, les bonnes et mauvaises pièces, et les cases stratégiques.",
+  "sections": [
+    {
+      "heading": "Les chaînes de pions",
+      "text": "Une chaîne de pions défend ses propres maillons, mais elle a deux points faibles : la BASE (le dernier pion, ici d4 pour les Blancs, f7-g6... non : e5 pour les Noirs) et les cases devant elle. Conseil de Nimzowitsch : « Attaquez la base de la chaîne ! » Les Blancs joueront c3 puis f4-f5 contre la base e5-f4 ? Non : la base noire est e5... En pratique : contre une chaîne, frappez le pion le plus reculé.",
+      "fen": "4k3/pp3ppp/2p1p3/3pP3/3P4/8/PPP2PPP/4K3 w - - 0 1"
+    },
+    {
+      "heading": "Le pion isolé : force et faiblesse",
+      "text": "Le pion d4 blanc est isolé : aucun pion ami ne peut le défendre. Il donne de l'espace et des cases d'appui (e5, c5) au milieu de jeu — jouez l'attaque ! Mais en finale, il devient une cible. Avec le pion isolé : évitez les échanges, attaquez le roi. Contre le pion isolé : échangez les pièces, bloquez-le (cavalier en d4 !), puis gagnez la finale.",
+      "fen": "r1bq1rk1/pp2bppp/2n1pn2/3p4/3P4/2NBPN2/PP3PPP/R1BQ1RK1 w - - 0 1"
+    },
+    {
+      "heading": "Les cases d'appui (avant-postes)",
+      "text": "Un avant-poste est une case avancée qu'aucun pion adverse ne peut chasser. Le cavalier blanc en d5 est installé à demeure : il paralyse tout le camp noir. Règle d'or : un cavalier sur un avant-poste vaut souvent une tour. Créez ces cases en chassant les pions adverses qui les défendent.",
+      "fen": "r3k2r/ppp2ppp/2n5/3Nb3/8/8/PPP2PPP/R1B1K2R b KQkq - 0 1"
+    },
+    {
+      "heading": "À retenir",
+      "text": "1) Identifiez la structure avant de choisir un plan. 2) Attaquez la base des chaînes. 3) Avec un pion isolé, gardez les pièces ; contre, échangez. 4) Les avant-postes de cavaliers gagnent les parties. 5) Une faiblesse de pion est éternelle — une mauvaise pièce peut bouger, un pion faible reste."
+    }
+  ]
+}

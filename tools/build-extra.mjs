@@ -1,0 +1,176 @@
+// Génère et valide les contenus additionnels :
+//  - src/data/endgames.json  (entraînement aux finales contre le moteur)
+//  - src/data/openings.json  (bibliothèque d'ouvertures avec plans)
+// Toutes les positions/coups sont vérifiés avec chess.js.
+import { writeFileSync, mkdirSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { Chess } from 'chess.js';
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+const problems = [];
+
+// ---------------------------------------------------------------- finales
+// goal: 'mate' (faire mat) ou 'survive' (tenir N coups sans perdre)
+const ENDGAMES = [
+  { id: 'fin-qe-mate', name: 'Dame contre roi', level: 'Débutant',
+    fen: 'k7/8/2K5/8/8/8/1Q6/8 w - - 0 1', side: 'w', goal: 'mate', maxMoves: 20,
+    intro: 'La finale la plus simple : matez avec la dame. Attention au pat — laissez toujours une case au roi adverse ou donnez échec.',
+    tip: 'Approchez votre roi, puis matez sur le bord avec la dame devant le roi.' },
+  { id: 'fin-tour-mate', name: 'Tour contre roi', level: 'Débutant',
+    fen: 'k7/8/2K5/8/8/8/8/7R w - - 0 1', side: 'w', goal: 'mate', maxMoves: 25,
+    intro: 'Matez avec une seule tour : il faut « empaqueter » le roi adverse en rétrécissant sa boîte, avec l\'aide de votre roi.',
+    tip: 'Coupez le roi avec la tour, avancez le vôtre, puis livrez le mat sur la rangée.' },
+  { id: 'fin-echelle', name: 'L\'échelle (deux tours)', level: 'Débutant',
+    fen: 'k7/8/8/8/8/8/2K5/R6R w - - 0 1', side: 'w', goal: 'mate', maxMoves: 15,
+    intro: 'Deux tours matent seules, sans aide du roi : chacune barre une rangée et pousse le roi vers le bord.',
+    tip: 'Alternez les échecs en descendant rangée par rangée — le roi n\'a nulle part où s\'arrêter.' },
+  { id: 'fin-pion-roi', name: 'Roi + pion contre roi', level: 'Intermédiaire',
+    fen: '8/8/4k3/8/4K3/8/3P4/8 w - - 0 1', side: 'w', goal: 'mate', maxMoves: 40,
+    intro: 'Le pion ne peut pas promouvoir seul : votre roi doit d\'abord prendre l\'opposition et déborder le roi noir.',
+    tip: 'Roi devant le pion ! Avancez le pion seulement quand le roi adverse est chassé.' },
+  { id: 'fin-deux-pions', name: 'Deux pions passés', level: 'Intermédiaire',
+    fen: '6k1/8/6K1/8/8/5PP1/8/8 w - - 0 1', side: 'w', goal: 'mate', maxMoves: 35,
+    intro: 'Deux pions unis se protègent mutuellement en avançant « à la queue leu leu » : le roi adverse ne peut pas les arrêter.',
+    tip: 'Avancez le pion non attaqué ; si l\'adversaire en prend un, l\'autre promut.' },
+  { id: 'fin-lucena', name: 'Le pont de Lucena', level: 'Avancé',
+    fen: '1K1k4/1P6/8/8/8/8/r7/2R5 w - - 0 1', side: 'w', goal: 'mate', maxMoves: 45,
+    intro: 'La position gagnante fondamentale des finales de tours : sortez le roi, puis construisez un « pont » avec la tour en 4e rangée pour parer les échecs.',
+    tip: 'Rc4 ! prépare le pont : le roi sort, puis Td4+/interposition bloque les échecs de la tour adverse.' },
+  { id: 'fin-philidor', name: 'La défense Philidor', level: 'Avancé',
+    fen: '4k3/8/4K3/4P3/8/8/r7/7R b - - 0 1', side: 'b', goal: 'survive', maxMoves: 24,
+    intro: 'Position de nulle théorique : vous avez les Noirs et devez tenir contre roi + pion + tour. Clouez la 3e rangée avec votre tour !',
+    tip: 'Ta6 ! — tant que le pion n\'est pas en e6, votre tour patrouille sur la 6e rangée. Quand le pion avance, passez derrière pour harceler le roi.' },
+  { id: 'fin-deux-fous', name: 'Mat aux deux fous', level: 'Expert',
+    fen: 'k7/8/2K5/8/8/8/8/3B1B2 w - - 0 1', side: 'w', goal: 'mate', maxMoves: 40,
+    intro: 'Le mat aux deux fous exige de pousser le roi dans le coin en formant un « triangle » avec les fous. Technique pure !',
+    tip: 'Les fous côte à côte créent un mur diagonal ; ramenez le roi adverse au coin avec votre roi.' },
+];
+
+for (const eg of ENDGAMES) {
+  try {
+    new Chess(eg.fen);
+  } catch (e) {
+    problems.push(`finale ${eg.id}: ${e.message}`);
+  }
+}
+
+// ------------------------------------------------------------- ouvertures
+const OPENINGS = [
+  {
+    id: 'ouv-italienne', name: 'Partie italienne', side: 'blancs', for: 'e4',
+    description: '1.e4 e5 2.Cf3 Cc6 3.Fc4 — développement rapide et pression immédiate sur le point faible f7. L\'ouverture idéale pour apprendre les principes.',
+    lines: [
+      { name: 'Giuoco Piano (jeu calme)',
+        moves: ['e4', 'e5', 'Nf3', 'Nc6', 'Bc4', 'Bc5', 'c3', 'Nf6', 'd4', 'exd4', 'cxd4', 'Bb4+', 'Nc3'],
+        plan: 'Les Blancs construisent le centre idéal pions d4+e4. Plan : pression sur f7 (Cg5, Dd5 parfois), développement rapide, puis poussée e5 pour chasser le cavalier f6. Attention au contre-jeu noir sur la colonne e et la case d4.' },
+      { name: 'Attaque des deux cavaliers',
+        moves: ['e4', 'e5', 'Nf3', 'Nc6', 'Bc4', 'Nf6', 'Ng5', 'd5', 'exd5', 'Na5', 'Bb5+', 'c6', 'dxc6', 'bxc6', 'Be2'],
+        plan: 'Après Cg5, les Blancs visent f7 immédiatement. Les Noirs sacrifient souvent un pion pour le développement. Avec les Blancs : consolidez, rendez le pion au bon moment et profitez de vos pions de l\'aile dame.' },
+      { name: 'Gambit Evans',
+        moves: ['e4', 'e5', 'Nf3', 'Nc6', 'Bc4', 'Bc5', 'b4', 'Bxb4', 'c3', 'Be7', 'd4', 'Na5', 'Be2', 'exd4', 'Qxd4'],
+        plan: 'Le sacrifice b4 achète un temps et le centre. Plan : Dd4 menace g7 et le centre, roque rapide, puis pression sur l\'aile roi avec Fb2 et Tae1. L\'initiative vaut plus que le pion.' },
+    ],
+  },
+  {
+    id: 'ouv-espagnole', name: 'Partie espagnole (Ruy Lopez)', side: 'blancs', for: 'e4',
+    description: '1.e4 e5 2.Cf3 Cc6 3.Fb5 — l\'ouverture des champions du monde. Pression durable, structures riches, plans profonds.',
+    lines: [
+      { name: 'Variante fermée',
+        moves: ['e4', 'e5', 'Nf3', 'Nc6', 'Bb5', 'a6', 'Ba4', 'Nf6', 'O-O', 'Be7', 'Re1', 'b5', 'Bb3', 'd6', 'c3', 'O-O', 'h3'],
+        plan: 'Le plan classique des Blancs : Cbd2-f1-g3 (manœuvre de manoeuvre !), pression sur e5, poussée d4 au bon moment. h3 empêche ...Fg4 avant de jouer d4. Partie de patience : améliorez chaque pièce avant d\'ouvrir.' },
+      { name: 'Défense berlinoise',
+        moves: ['e4', 'e5', 'Nf3', 'Nc6', 'Bb5', 'Nf6', 'O-O', 'Nxe4', 'd4', 'Nd6', 'Bxc6', 'dxc6', 'dxe5', 'Nf5', 'Qxd8+', 'Kxd8'],
+        plan: 'Le « mur de Berlin » : les Noirs perdent le roque mais ont le couple de fous et une structure solide. Avec les Blancs : poussez les pions de l\'aile roi (f4, g4), créez un pion passé lointain, et activez le roi.' },
+      { name: 'Variante d\'échange',
+        moves: ['e4', 'e5', 'Nf3', 'Nc6', 'Bb5', 'a6', 'Bxc6', 'dxc6', 'O-O', 'f6', 'd4', 'exd4', 'Nxd4', 'c5', 'Nb3', 'Qxd1', 'Rxd1'],
+        plan: 'Les Blancs échangent contre la structure : 4 pions contre 3 à l\'aile roi (pion passé potentiel), les Noirs compensent avec le couple de fous. Plan : échanger les dames, pousser e5 et les pions de l\'aile roi en finale.' },
+    ],
+  },
+  {
+    id: 'ouv-sicilienne', name: 'Défense sicilienne', side: 'noirs', for: 'e4',
+    description: '1.e4 c5 — la réponse la plus combative contre e4. Les Noirs jouent le contre-jeu immédiat avec la semi-ouverte colonne c.',
+    lines: [
+      { name: 'Variante Najdorf',
+        moves: ['e4', 'c5', 'Nf3', 'd6', 'd4', 'cxd4', 'Nxd4', 'Nf6', 'Nc3', 'a6', 'Be3', 'e5', 'Nb3', 'Be6', 'f3', 'Be7', 'Qd2', 'O-O', 'O-O-O'],
+        plan: 'La Rolls-Royce des siciliennes : ...a6 prépare ...b5 et empêche les intrusions en b5. Plans noirs : expansion ...b5-b4 sur l\'aile dame, pression sur la colonne c, contre-attaque centrale ...d5 au bon moment. Les Blancs attaquent au roi — course de vitesses !' },
+      { name: 'Variante du dragon',
+        moves: ['e4', 'c5', 'Nf3', 'd6', 'd4', 'cxd4', 'Nxd4', 'Nf6', 'Nc3', 'g6', 'Be3', 'Bg7', 'f3', 'O-O', 'Qd2', 'Nc6', 'O-O-O'],
+        plan: 'Le fou g7 est le « dragon » : il domine la grande diagonale. Plans noirs : pression sur la colonne c et sur d4, ...Tb8 et ...b5. Attention à l\'attaque yougoslave (h4-h5, Fh6, Dxh6, mat) — contre-attaquez vite au centre et sur c3.' },
+      { name: 'Sicilienne classique',
+        moves: ['e4', 'c5', 'Nf3', 'd6', 'd4', 'cxd4', 'Nxd4', 'Nf6', 'Nc3', 'Nc6', 'Bg5', 'e6', 'Qd2', 'Be7', 'O-O-O', 'O-O', 'f4'],
+        plan: 'Le Richter-Rauzer : Fg5 épingle le cavalier f6 pour contrôler d5. Plans noirs : ...h6 chassant le fou, ...Cxd4 et ...b5, ou rupture ...d5. Position riche où les deux camps ont des chances.' },
+    ],
+  },
+  {
+    id: 'ouv-london', name: 'Système de Londres', side: 'blancs', for: 'd4',
+    description: '1.d4 avec Ff4 — le système le plus solide et simple à apprendre avec les Blancs. Plans clairs, peu de théorie à mémoriser.',
+    lines: [
+      { name: 'Contre ...d5 (setup classique)',
+        moves: ['d4', 'd5', 'Bf4', 'Nf6', 'e3', 'e6', 'Nf3', 'c5', 'c3', 'Nc6', 'Nbd2', 'Bd6', 'Bg3', 'O-O', 'Bd3'],
+        plan: 'La pyramide de Londres : pions d4-e3-c3, fous f4 et d3, cavaliers f3 et d2. Plan type : Ce5 !, f4, puis attaque sur le roi avec Tg3 ou Dh5. Si les Noirs jouent ...Fd6, échangez (Fg3) : leur structure reste passive.' },
+      { name: 'Contre la défense est-indienne',
+        moves: ['d4', 'Nf6', 'Bf4', 'g6', 'e3', 'Bg7', 'Nf3', 'O-O', 'Be2', 'd6', 'h3', 'Nbd7', 'O-O'],
+        plan: 'h3 donne un refuge au fou (h2) contre ...Ch5. Plan : développement calme (Cbd2, c3), puis rupture e4 au bon moment ou jeu minoritaire. Solide et sans risque — les Noirs doivent prouver quelque chose.' },
+      { name: 'Contre ...c5 rapide',
+        moves: ['d4', 'd5', 'Bf4', 'c5', 'e3', 'Nc6', 'c3', 'Qb6', 'Qb3', 'c4', 'Qc2', 'Bf5', 'Qc1'],
+        plan: 'Les Noirs attaquent b2 tôt. Ne craignez rien : Db3 contre-attaque b7. Plan ensuite : développement standard, Ce5, et pression sur le cavalier c6. Le pion c4 noir peut devenir une cible (b3).' },
+    ],
+  },
+  {
+    id: 'ouv-gambit-dame', name: 'Gambit de la dame', side: 'blancs', for: 'd4',
+    description: '1.d4 d5 2.c4 — l\'ouverture classique par excellence : pression durable sur le centre et jeu stratégique riche.',
+    lines: [
+      { name: 'Gambit dame refusé',
+        moves: ['d4', 'd5', 'c4', 'e6', 'Nc3', 'Nf6', 'Bg5', 'Be7', 'e3', 'O-O', 'Nf3', 'h6', 'Bh4', 'b6', 'Bd3', 'Bb7', 'O-O'],
+        plan: 'Le plan maître : jeu minoritaire ! Tadi1, Fb1, puis b4-b5 pour créer un pion faible en c6. Alternative : tension centrale avec cxd5 puis pression sur la colonne c. Position à double tranchant très instructive.' },
+      { name: 'Défense slave',
+        moves: ['d4', 'd5', 'c4', 'c6', 'Nf3', 'Nf6', 'Nc3', 'dxc4', 'a4', 'Bf5', 'e3', 'e6', 'Bxc4', 'Bb4', 'O-O', 'O-O'],
+        plan: 'Contre la slave : les Noirs développent le fou c8 avant ...e6. Avec les Blancs : récupérez le pion c4, occupez le centre (e4 parfois), et exploitez l\'espace. Solide des deux côtés — la précision prime.' },
+      { name: 'Gambit dame accepté',
+        moves: ['d4', 'd5', 'c4', 'dxc4', 'Nf3', 'Nf6', 'e3', 'e6', 'Bxc4', 'c5', 'O-O', 'a6'],
+        plan: 'Les Noirs tiennent le pion mais cèdent le centre. Plan blanc : développement rapide, De2 et Td1 pressant d6, rupture d5 ou e4. Ne laissez pas les Noirs consolider avec ...b5 et ...Fb7.' },
+    ],
+  },
+  {
+    id: 'ouv-carokann', name: 'Défense Caro-Kann', side: 'noirs', for: 'e4',
+    description: '1.e4 c6 — la défense la plus solide contre e4 : structure saine, aucune pièce mauvaise, finales favorables.',
+    lines: [
+      { name: 'Variante classique',
+        moves: ['e4', 'c6', 'd4', 'd5', 'Nc3', 'dxe4', 'Nxe4', 'Bf5', 'Ng3', 'Bg6', 'h4', 'h6', 'Nf3', 'Nd7', 'h5', 'Bh7', 'Bd3', 'Bxd3', 'Qxd3'],
+        plan: 'Plan noir : ...e6, ...Cgf6, ...Fd6 ou ...Fe7, roque, puis la rupture libératrice ...c5 ! Les Blancs ont de l\'espace (h4-h5) mais les Noirs n\'ont AUCUNE mauvaise pièce. Jouez pour la finale.' },
+      { name: 'Variante d\'avance',
+        moves: ['e4', 'c6', 'd4', 'd5', 'e5', 'Bf5', 'Nf3', 'e6', 'Be2', 'c5', 'O-O', 'Nc6'],
+        plan: 'Contre la poussée e5 : attaquez la base de la chaîne immédiatement avec ...c5 ! (avant que les Blancs ne consolident avec c3). Plan : ...Cc6, ...Cge7-f5, pression sur d4. Le fou f5 est déjà actif — c\'est tout l\'avantage de la Caro.' },
+      { name: 'Variante d\'échange',
+        moves: ['e4', 'c6', 'd4', 'd5', 'exd5', 'cxd5', 'Bd3', 'Nc6', 'c3', 'Nf6', 'Bf4', 'Bg4', 'Qb3'],
+        plan: 'Structure symétrique de type Carlsbad : les plans valent plus que la mémoire. Blancs : jeu minoritaire b4-b5. Noirs : contre-jeu central ...e5 ou attaque du roi. Apprenez les plans des deux côtés — c\'est la même structure que le gambit dame !' },
+    ],
+  },
+];
+
+// Validation : rejouer chaque ligne depuis la position initiale
+for (const op of OPENINGS) {
+  for (const line of op.lines) {
+    try {
+      const g = new Chess();
+      for (const san of line.moves) {
+        const mv = g.move(san.replace(/[+#!?]+$/, ''));
+        if (!mv) throw new Error(`coup illégal ${san}`);
+      }
+    } catch (e) {
+      problems.push(`ouverture ${op.id} / ${line.name}: ${e.message}`);
+    }
+  }
+}
+
+if (problems.length) {
+  console.log('PROBLÈMES:\n' + problems.join('\n'));
+  process.exit(1);
+}
+
+const dataDir = join(ROOT, 'src/data');
+mkdirSync(dataDir, { recursive: true });
+writeFileSync(join(dataDir, 'endgames.json'), JSON.stringify(ENDGAMES, null, 2));
+writeFileSync(join(dataDir, 'openings.json'), JSON.stringify(OPENINGS, null, 2));
+console.log(`✨ ${ENDGAMES.length} finales + ${OPENINGS.length} ouvertures écrites et validées`);

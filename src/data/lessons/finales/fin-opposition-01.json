@@ -1,0 +1,35 @@
+{
+  "id": "fin-opposition-01",
+  "category": "finales",
+  "title": "L'opposition et les finales de pions",
+  "level": "Intermédiaire",
+  "intro": "Dans les finales roi + pion contre roi, tout se joue sur l'opposition : l'art de bloquer le roi adverse avec le vôtre.",
+  "sections": [
+    {
+      "heading": "L'opposition directe",
+      "text": "Quand les deux rois se font face avec une case d'écart, celui qui NE doit PAS jouer « a l'opposition » : l'autre est obligé de céder le passage. C'est le concept fondamental de toutes les finales de pions.",
+      "fen": "8/8/4k3/8/4K3/8/8/8 w - - 0 1"
+    },
+    {
+      "heading": "Prendre l'opposition pour avancer",
+      "text": "Votre pion est en d2. Pour le faire promouvoir, votre roi doit d'abord déborder le roi noir : prenez l'opposition, avancez par l'aile, chassez le roi adverse, puis poussez le pion.",
+      "fen": "8/8/4k3/8/4K3/8/3P4/8 w - - 0 1",
+      "moves": [
+        "d4",
+        "Kd6",
+        "Kf5",
+        "Ke7",
+        "d5"
+      ]
+    },
+    {
+      "heading": "La règle du carré",
+      "text": "Un pion isolé promut si le roi adverse ne peut pas entrer dans son « carré » : tracez mentalement un carré du pion jusqu'à la case de promotion. Si le roi adverse, au trait, ne peut pas y entrer, le pion promut sans aide.",
+      "fen": "8/8/8/8/1k6/8/1P6/4K3 w - - 0 1"
+    },
+    {
+      "heading": "À retenir",
+      "text": "1) Roi devant le pion, pas derrière. 2) Qui n'a pas le trait a l'opposition. 3) Comptez le carré avant de laisser votre roi derrière. 4) En finale, chaque tempo compte : ne perdez pas un seul coup."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "bands": [
+    {
+      "band": 0,
+      "min": 600,
+      "max": 1000,
+      "file": "band0.json",
+      "count": 500
+    },
+    {
+      "band": 1,
+      "min": 1000,
+      "max": 1300,
+      "file": "band1.json",
+      "count": 800
+    },
+    {
+      "band": 2,
+      "min": 1300,
+      "max": 1600,
+      "file": "band2.json",
+      "count": 900
+    },
+    {
+      "band": 3,
+      "min": 1600,
+      "max": 1900,
+      "file": "band3.json",
+      "count": 900
+    },
+    {
+      "band": 4,
+      "min": 1900,
+      "max": 2200,
+      "file": "band4.json",
+      "count": 700
+    },
+    {
+      "band": 5,
+      "min": 2200,
+      "max": 2500,
+      "file": "band5.json",
+      "count": 500
+    },
+    {
+      "band": 6,
+      "min": 2500,
+      "max": null,
+      "file": "band6.json",
+      "count": 300
+    }
+  ],
+  "categories": [
+    "mat1",
+    "mat2",
+    "mat",
+    "fourchette",
+    "clouage",
+    "enfilade",
+    "decouverte",
+    "sacrifice",
+    "deviation",
+    "intermediaire",
+    "finale",
+    "pieceEnPrise",
+    "promotion",
+    "calme",
+    "rayonX",
+    "degagement"
+  ]
+}

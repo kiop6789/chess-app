@@ -1,0 +1,28 @@
+{
+  "id": "strat-prophylaxie-01",
+  "category": "strategie",
+  "title": "Prophylaxie et jeu de restriction",
+  "level": "Avancé",
+  "intro": "La prophylaxie — chère à Nimzowitsch et Karpov — consiste à empêcher les plans adverses AVANT de réaliser les siens.",
+  "sections": [
+    {
+      "heading": "Demandez-vous : que veut mon adversaire ?",
+      "text": "Avant chaque coup, la question n'est pas « que puis-je faire ? » mais « que ferait mon adversaire si c'était son tour ? ». Si sa réponse est dangereuse, votre priorité est de l'en empêcher. Ici, les Noirs menacent ...Ch5 pour échanger le fou et ...f5. Le coup h3 ! des Blancs supprime les deux idées à la fois.",
+      "fen": "r2q1rk1/pp1bppbp/2np1np1/8/3NP3/2N1BP2/PPPQ2PP/R3KB1R b KQ - 3 8"
+    },
+    {
+      "heading": "La restriction avant l'expansion",
+      "text": "Karpov gagnait des parties entières sans jamais « attaquer » : il supprimait chaque contre-jeu jusqu'à ce que l'adversaire n'ait plus que des coups qui se dégradent. Séquence type : 1) Identifier le seul plan actif adverse. 2) Le neutraliser. 3) ALORS avancer ses propres pions. L'ordre compte.",
+      "fen": "r2q1rk1/pp1bppbp/2np1np1/8/3NP3/2N1BP2/PPPQ2PP/R3KB1R w KQ - 4 9"
+    },
+    {
+      "heading": "Le sur-protection",
+      "text": "Concept de Nimzowitsch : surprotégez vos points stratégiques (centre, avant-postes) AVANT qu'ils ne soient attaqués. Le pion e4, surprotégé par le cavalier c3, le fou e3, la dame d2, devient un roc qui libère les autres pièces pour l'attaque. La sur-protection est offensive, pas défensive !",
+      "fen": "r2q1rk1/pp1bppbp/2np1np1/8/3NP3/2N1BP2/PPPQ2PP/R3KB1R w KQ - 4 9"
+    },
+    {
+      "heading": "À retenir",
+      "text": "1) « Que veut mon adversaire ? » avant chaque coup. 2) Empêcher un plan vaut souvent mieux qu'en exécuter un. 3) Neutralisez d'abord, expandez ensuite. 4) Surprotégez vos points forts. 5) La patience prophylactique use les adversaires impatients."
+    }
+  ]
+}

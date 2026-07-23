@@ -1,0 +1,82 @@
+[
+  {
+    "id": "fin-pions-0001",
+    "theme": "finale",
+    "subtheme": "pions",
+    "difficulty": 1,
+    "fen": "8/8/8/1k6/8/8/6P1/K7 w - - 0 1",
+    "solution": [
+      "g4",
+      "Kc4",
+      "g5",
+      "Kd3",
+      "g6"
+    ],
+    "explanation": "Course de pions : votre pion g file à dame pendant que le roi noir est trop loin pour l'arrêter.",
+    "hint": "Poussez votre pion sans attendre."
+  },
+  {
+    "id": "fin-pions-0002",
+    "theme": "finale",
+    "subtheme": "pions",
+    "difficulty": 2,
+    "fen": "4k3/8/3KP3/8/8/8/8/8 w - - 0 1",
+    "solution": [
+      "e7",
+      "Kf7",
+      "Kd7"
+    ],
+    "explanation": "Le pion e6 avance jusqu'à e7, puis le roi blanc prend l'opposition et chasse le roi noir : le pion promeut.",
+    "hint": "Poussez le pion, puis placez le roi devant."
+  },
+  {
+    "id": "fin-tours-0001",
+    "theme": "finale",
+    "subtheme": "tours",
+    "difficulty": 1,
+    "fen": "6k1/8/6K1/8/8/8/8/R7 w - - 0 1",
+    "solution": [
+      "Ra8#"
+    ],
+    "explanation": "Le roi noir est cloué au coin par votre roi : Ta8 est mat.",
+    "hint": "Donnez échec sur la 8e rangée."
+  },
+  {
+    "id": "fin-tours-0002",
+    "theme": "finale",
+    "subtheme": "tours",
+    "difficulty": 2,
+    "fen": "k7/8/2K5/8/8/8/8/7R w - - 0 1",
+    "solution": [
+      "Kb6",
+      "Kb8",
+      "Rh8#"
+    ],
+    "explanation": "Approchez d'abord le roi (Kb6) pour contrôler a7 et b7 : après Kb8, Th8 est mat.",
+    "hint": "Le roi doit d'abord contrôler les cases de fuite."
+  },
+  {
+    "id": "fin-tours-0003",
+    "theme": "finale",
+    "subtheme": "tours",
+    "difficulty": 1,
+    "fen": "5k2/8/5K2/8/8/8/8/1R6 w - - 0 1",
+    "solution": [
+      "Rb8#"
+    ],
+    "explanation": "Même technique : le roi noir est bloqué en f8 par votre roi, Tb8 est mat.",
+    "hint": "Échec sur la dernière rangée."
+  },
+  {
+    "id": "fin-dames-0001",
+    "theme": "finale",
+    "subtheme": "dames",
+    "difficulty": 1,
+    "fen": "k7/8/2K5/8/8/8/1Q6/8 w - - 0 1",
+    "solution": [
+      "Qb7#"
+    ],
+    "explanation": "Db7 mat : la dame contrôle a8, a7 et b8 pendant que le roi blanc couvre b6 et b7.",
+    "hint": "Placez la dame à un pas du roi adverse, protégée par votre roi."
+  }
+]

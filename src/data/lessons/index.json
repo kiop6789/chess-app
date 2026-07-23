@@ -1,0 +1,65 @@
+[
+  {
+    "id": "ouv-italienne-01",
+    "file": "ouvertures/ouv-italienne-01.json",
+    "category": "ouvertures",
+    "title": "La Partie italienne (Giuoco Piano)",
+    "level": "Débutant",
+    "intro": "L'une des plus anciennes ouvertures du jeu : les Blancs développent rapidement leurs pièces et visent le point faible f7.",
+    "sectionCount": 4
+  },
+  {
+    "id": "tac-fourchette-01",
+    "file": "tactiques/tac-fourchette-01.json",
+    "category": "tactiques",
+    "title": "La fourchette",
+    "level": "Débutant",
+    "intro": "La fourchette est le motif tactique le plus fréquent : une seule pièce attaque deux cibles à la fois.",
+    "sectionCount": 4
+  },
+  {
+    "id": "fin-opposition-01",
+    "file": "finales/fin-opposition-01.json",
+    "category": "finales",
+    "title": "L'opposition et les finales de pions",
+    "level": "Intermédiaire",
+    "intro": "Dans les finales roi + pion contre roi, tout se joue sur l'opposition : l'art de bloquer le roi adverse avec le vôtre.",
+    "sectionCount": 4
+  },
+  {
+    "id": "strat-pions-01",
+    "file": "strategie/strat-pions-01.json",
+    "category": "strategie",
+    "title": "Structures de pions et cases faibles",
+    "level": "Intermédiaire",
+    "intro": "Les pions sont « l'âme du jeu » (Philidor). Leur structure détermine les plans, les bonnes et mauvaises pièces, et les cases stratégiques.",
+    "sectionCount": 4
+  },
+  {
+    "id": "strat-initiative-01",
+    "file": "strategie/strat-initiative-01.json",
+    "category": "strategie",
+    "title": "L'initiative et le développement",
+    "level": "Intermédiaire",
+    "intro": "L'initiative, c'est la capacité de créer des menaces qui obligent l'adversaire à réagir. Elle vaut souvent plus qu'un pion.",
+    "sectionCount": 4
+  },
+  {
+    "id": "strat-espace-01",
+    "file": "strategie/strat-espace-01.json",
+    "category": "strategie",
+    "title": "L'avantage d'espace",
+    "level": "Avancé",
+    "intro": "Plus d'espace signifie des pièces qui communiquent mieux. Mais l'espace seul ne gagne pas — il faut savoir l'utiliser sans s'étirer.",
+    "sectionCount": 4
+  },
+  {
+    "id": "strat-prophylaxie-01",
+    "file": "strategie/strat-prophylaxie-01.json",
+    "category": "strategie",
+    "title": "Prophylaxie et jeu de restriction",
+    "level": "Avancé",
+    "intro": "La prophylaxie — chère à Nimzowitsch et Karpov — consiste à empêcher les plans adverses AVANT de réaliser les siens.",
+    "sectionCount": 4
+  }
+]

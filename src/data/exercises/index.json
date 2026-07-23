@@ -1,0 +1,19 @@
+{
+  "themes": [
+    {
+      "theme": "tactique",
+      "file": "tactiques.json",
+      "count": 25
+    },
+    {
+      "theme": "finale",
+      "file": "finales.json",
+      "count": 6
+    },
+    {
+      "theme": "ouverture",
+      "file": "ouvertures.json",
+      "count": 6
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "tac-fourchette-01",
+  "category": "tactiques",
+  "title": "La fourchette",
+  "level": "Débutant",
+  "intro": "La fourchette est le motif tactique le plus fréquent : une seule pièce attaque deux cibles à la fois.",
+  "sections": [
+    {
+      "heading": "Qu'est-ce qu'une fourchette ?",
+      "text": "Une pièce attaque simultanément deux pièces adverses (ou plus). L'adversaire ne peut en sauver qu'une : vous gagnez l'autre. Le cavalier est le champion de la fourchette grâce à sa marche en L, imprévisible.",
+      "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/4P3/3P4/PPP1NPPP/RNBQKB1R b KQkq - 0 4"
+    },
+    {
+      "heading": "La fourchette royale",
+      "text": "Le rêve de tout cavalier : sauter en c7 (ou c2) pour donner échec au roi tout en attaquant la tour du coin. Échec oblige, la tour est perdue.",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/8/8/2N5/PPPPPPPP/R1BQKBNR b KQkq - 2 2",
+      "moves": [
+        "Nf6",
+        "Nd5",
+        "Ne4",
+        "Nxc7+"
+      ]
+    },
+    {
+      "heading": "Les pions aussi fourchettent",
+      "text": "Ne sous-estimez pas les fourchettes de pions : un simple pion qui attaque deux pièces maîtresses gagne du matériel. Ici, le pion d4 va avancer en d5 et attaquer le cavalier ET préparer e5 contre l'autre cavalier.",
+      "fen": "r1bqkb1r/pp1ppppp/2n2n2/2p5/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4",
+      "moves": [
+        "d5"
+      ]
+    },
+    {
+      "heading": "Comment les repérer",
+      "text": "Après chaque coup adverse, demandez-vous : « Quelles cases mon cavalier (ou mon pion) pourrait-il attaquer en un coup ? » Les pièces adverses sur la même couleur de case que votre cavalier sont des cibles potentielles de fourchette."
+    }
+  ]
+}

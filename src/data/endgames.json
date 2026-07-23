@@ -1,0 +1,90 @@
+[
+  {
+    "id": "fin-qe-mate",
+    "name": "Dame contre roi",
+    "level": "Débutant",
+    "fen": "k7/8/2K5/8/8/8/1Q6/8 w - - 0 1",
+    "side": "w",
+    "goal": "mate",
+    "maxMoves": 20,
+    "intro": "La finale la plus simple : matez avec la dame. Attention au pat — laissez toujours une case au roi adverse ou donnez échec.",
+    "tip": "Approchez votre roi, puis matez sur le bord avec la dame devant le roi."
+  },
+  {
+    "id": "fin-tour-mate",
+    "name": "Tour contre roi",
+    "level": "Débutant",
+    "fen": "k7/8/2K5/8/8/8/8/7R w - - 0 1",
+    "side": "w",
+    "goal": "mate",
+    "maxMoves": 25,
+    "intro": "Matez avec une seule tour : il faut « empaqueter » le roi adverse en rétrécissant sa boîte, avec l'aide de votre roi.",
+    "tip": "Coupez le roi avec la tour, avancez le vôtre, puis livrez le mat sur la rangée."
+  },
+  {
+    "id": "fin-echelle",
+    "name": "L'échelle (deux tours)",
+    "level": "Débutant",
+    "fen": "k7/8/8/8/8/8/2K5/R6R w - - 0 1",
+    "side": "w",
+    "goal": "mate",
+    "maxMoves": 15,
+    "intro": "Deux tours matent seules, sans aide du roi : chacune barre une rangée et pousse le roi vers le bord.",
+    "tip": "Alternez les échecs en descendant rangée par rangée — le roi n'a nulle part où s'arrêter."
+  },
+  {
+    "id": "fin-pion-roi",
+    "name": "Roi + pion contre roi",
+    "level": "Intermédiaire",
+    "fen": "8/8/4k3/8/4K3/8/3P4/8 w - - 0 1",
+    "side": "w",
+    "goal": "mate",
+    "maxMoves": 40,
+    "intro": "Le pion ne peut pas promouvoir seul : votre roi doit d'abord prendre l'opposition et déborder le roi noir.",
+    "tip": "Roi devant le pion ! Avancez le pion seulement quand le roi adverse est chassé."
+  },
+  {
+    "id": "fin-deux-pions",
+    "name": "Deux pions passés",
+    "level": "Intermédiaire",
+    "fen": "6k1/8/6K1/8/8/5PP1/8/8 w - - 0 1",
+    "side": "w",
+    "goal": "mate",
+    "maxMoves": 35,
+    "intro": "Deux pions unis se protègent mutuellement en avançant « à la queue leu leu » : le roi adverse ne peut pas les arrêter.",
+    "tip": "Avancez le pion non attaqué ; si l'adversaire en prend un, l'autre promut."
+  },
+  {
+    "id": "fin-lucena",
+    "name": "Le pont de Lucena",
+    "level": "Avancé",
+    "fen": "1K1k4/1P6/8/8/8/8/r7/2R5 w - - 0 1",
+    "side": "w",
+    "goal": "mate",
+    "maxMoves": 45,
+    "intro": "La position gagnante fondamentale des finales de tours : sortez le roi, puis construisez un « pont » avec la tour en 4e rangée pour parer les échecs.",
+    "tip": "Rc4 ! prépare le pont : le roi sort, puis Td4+/interposition bloque les échecs de la tour adverse."
+  },
+  {
+    "id": "fin-philidor",
+    "name": "La défense Philidor",
+    "level": "Avancé",
+    "fen": "4k3/8/4K3/4P3/8/8/r7/7R b - - 0 1",
+    "side": "b",
+    "goal": "survive",
+    "maxMoves": 24,
+    "intro": "Position de nulle théorique : vous avez les Noirs et devez tenir contre roi + pion + tour. Clouez la 3e rangée avec votre tour !",
+    "tip": "Ta6 ! — tant que le pion n'est pas en e6, votre tour patrouille sur la 6e rangée. Quand le pion avance, passez derrière pour harceler le roi."
+  },
+  {
+    "id": "fin-deux-fous",
+    "name": "Mat aux deux fous",
+    "level": "Expert",
+    "fen": "k7/8/2K5/8/8/8/8/3B1B2 w - - 0 1",
+    "side": "w",
+    "goal": "mate",
+    "maxMoves": 40,
+    "intro": "Le mat aux deux fous exige de pousser le roi dans le coin en formant un « triangle » avec les fous. Technique pure !",
+    "tip": "Les fous côte à côte créent un mur diagonal ; ramenez le roi adverse au coin avec votre roi."
+  }
+]

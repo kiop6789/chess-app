@@ -1,0 +1,36 @@
+{
+  "id": "ouv-italienne-01",
+  "category": "ouvertures",
+  "title": "La Partie italienne (Giuoco Piano)",
+  "level": "Débutant",
+  "intro": "L'une des plus anciennes ouvertures du jeu : les Blancs développent rapidement leurs pièces et visent le point faible f7.",
+  "sections": [
+    {
+      "heading": "L'idée générale",
+      "text": "Après 1.e4 e5 2.Cf3 Cc6 3.Fc4, les Blancs placent le fou sur la diagonale a2-g8 qui pointe vers f7, la case la plus faible du camp noir (seul le roi la défend). Le plan : développer vite, roquer, puis frapper au centre avec c3 et d4.",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3"
+    },
+    {
+      "heading": "Les premiers coups",
+      "text": "Suivez la séquence : les Noirs répondent le plus souvent 3...Fc5 (le « Giuoco Piano », jeu calme). Les deux camps développent leurs cavaliers, puis les Blancs préparent la poussée d4.",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3",
+      "moves": [
+        "Bc5",
+        "c3",
+        "Nf6",
+        "d4",
+        "exd4",
+        "cxd4"
+      ]
+    },
+    {
+      "heading": "Le point clé f7",
+      "text": "Ce diagramme montre pourquoi f7 est fragile : le fou c4 et le cavalier g5 peuvent s'y combiner. C'est la base du « coup du foie » et de nombreux pièges italiens.",
+      "fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p1N1/2B1P3/8/PPPP1PPP/RNBQK2R b KQkq - 5 4"
+    },
+    {
+      "heading": "À retenir",
+      "text": "1) Développez une pièce nouvelle à chaque coup. 2) Roquez avant le coup 10. 3) Contrôlez le centre avec vos pions. 4) Gardez un œil sur f7 (et f2 !) : c'est là que se gagnent les parties entre débutants."
+    }
+  ]
+}
